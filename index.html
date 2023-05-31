@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+    <!--  <link rel="stylesheet" href="styles/debug.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <style>
+        
+        @media (max-width: 1023px) {
+            #col-flex {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            
+            #col-pad {
+                padding: 0;
+            }
+        }
+        
+        @media (max-width: 444px) {
+            #first {
+                padding: 0.70rem!important;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: hsl(234, 29%, 20%);">
+
+
+    <section class="section hero is-fullheight is-justify-content-center">
+        <div class="columns is-mobile is-centered is-vcentered">
+            <div class="box">
+
+                <div id="col-flex" class="columns is-desktop">
+                    <div id="first" class="column p-6 mt-5 mb-5 is-narrow is-desktop is-flex is-flex-direction-column is-justify-content-center" style="max-width: 440px;">
+
+                        <h1 class="title is-size-1 is-size-2-mobile">Stay updated!</h1>
+                        <p class="mb-4 has-text-weight-semibold">Join 60,000+ product managers receiving monthly updates on:</p>
+
+                        <div class="icon-text is-flex-wrap-nowrap">
+                            <span class="icon mr-3 mb-3">
+                                <img src="assets/images/icon-list.svg" alt="">
+                            </span>
+                            <span class="is-size-7 has-text-weight-bold">Product discovery and building what matters</span>
+                        </div>
+                        <div class="icon-text is-flex-wrap-nowrap">
+                            <span class="icon mr-3 mb-3">
+                                <img src="assets/images/icon-list.svg" alt="">
+                            </span>
+                            <span class="is-size-7 has-text-weight-bold">Measuring to ensure updates are a success</span>
+                        </div>
+                        <div class="icon-text mb-5 is-flex-wrap-nowrap">
+                            <span class="icon mr-3 mb-3">
+                                <img src="assets/images/icon-list.svg" alt="">
+                            </span>
+                            <span class="is-size-7 has-text-weight-bold">And much more!</span>
+                        </div>
+
+
+                        <div class="field">
+                            <label for="email" class="label is-size-7">Email address</label>
+                            <div class="control mb-2">
+                                <input id="email" name="email" type="email" class="input" placeholder="hede">
+                            </div>
+                        </div>
+
+                        <button class="button is-fullwidth is-dark">Subscribe to monthly newsletter</button>
+
+
+                    </div>
+                    <div id="col-pad" class="column is-narrow is-desktop">
+
+                        <figure class="image">
+                            <img src="assets/images/illustration-sign-up-desktop.svg" class="is-hidden-mobile is-hidden-touch">
+                            <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class=" is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
+                        </figure>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <script>
+        AOS.init();
+
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
