@@ -12,23 +12,27 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <style>
-        
         @media (max-width: 1023px) {
             #col-flex {
                 display: flex;
                 flex-direction: column-reverse;
             }
-            
+
             #col-pad {
                 padding: 0;
             }
         }
-        
+
         @media (max-width: 444px) {
             #first {
-                padding: 0.70rem!important;
+                padding: 0.70rem !important;
+            }
+
+            #success {
+                padding: 1rem !important;
             }
         }
+
     </style>
 
 
@@ -37,7 +41,7 @@
 <body style="background-color: hsl(234, 29%, 20%);">
 
 
-    <section class="section hero is-fullheight is-justify-content-center">
+    <section id="non" class="section hero is-fullheight is-justify-content-center">
         <div class="columns is-mobile is-centered is-vcentered">
             <div class="box" style="border-radius: 28px;">
 
@@ -69,12 +73,19 @@
 
                         <div class="field">
                             <label for="email" class="label is-size-7">Email address</label>
-                            <div class="control mb-2">
-                                <input id="email" name="email" type="email" class="input" placeholder="hede">
+                            <div class="control mb-2 has-icons-left has-icons-right">
+                                <input id="email" name="email" type="email" class="input" placeholder="hede" oninput="verifyEmail()">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span id="successIcon" class="icon is-small is-right is-hidden">
+                                    <i id="suc" class="fas fa-check is-hidden"></i>
+                                    <i id="wrong" class="fa-solid fa-xmark is-hidden"></i>
+                                </span>
                             </div>
                         </div>
 
-                        <button class="button is-fullwidth is-dark">Subscribe to monthly newsletter</button>
+                        <button id="btnSubmit" class="button is-fullwidth is-dark" onclick="verification()">Subscribe to monthly newsletter</button>
 
 
                     </div>
@@ -95,13 +106,23 @@
 
 
 
+    <section id="oui" class="section hero is-fullheight is-justify-content-center is-hidden">
+        <div class="columns is-mobile is-centered is-vcentered">
+            <div id="success" class="box p-6" style="border-radius: 28px;">
+                <div class="column is-narrow" style="max-width: 350px; max-height: auto;">
+                    <span class="icon is-large mb-5">
+                        <img src="assets/images/icon-success.svg" alt="">
+                    </span>
+                    <h1 class="title is-size-1 is-size-2-mobile has-text-weight-bold">Thanks for subscribing!</h1>
+                    <p class="has-text-left is-size-7 mb-5 has-text-weight-semibold">A confirmation emai has been sent to <span class="has-text-weight-semibold">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+                    <button id="btnSuccess" class="button is-fullwidth is-dark">Dismiss message</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <script>
-        AOS.init();
-
-    </script>
     <script src="app.js"></script>
+
 </body>
 
 </html>
