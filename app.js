@@ -1,9 +1,3 @@
-let btnSubmit = document.querySelector('#btnSubmit')
-let btnSuccess = document.querySelector('#btnSuccess')
-let emailInput = document.querySelector('#email')
-let oui = document.querySelector('#oui')
-let non = document.querySelector('#non')
-let successIcon = document.querySelector('#successIcon')
 
 
 
@@ -20,7 +14,7 @@ function verifyEmail() {
     let emailInput = document.querySelector('#email')
 
     let successIcon = document.querySelector('#successIcon')
-    
+
     let suc = document.querySelector('#suc')
     let wrong = document.querySelector('#wrong')
 
@@ -48,10 +42,10 @@ function verifyEmail() {
 
 
 function verification() {
-      if (verifyEmail()) {
-    let oui = document.querySelector('#oui');
-    let non = document.querySelector('#non');
-    oui.classList.remove('is-hidden');
-    non.classList.add('is-hidden');
-  }
+    if (verifyEmail()) {
+        let oui = document.querySelector('#oui');
+        let non = document.querySelector('#non');
+        oui.classList.remove('is-hidden');
+        non.classList.add('is-hidden');
+    }
 }
